@@ -1,0 +1,1152 @@
+{
+  "schema_version": "5.0",
+  "last_reviewed": "2026-09-02",
+  "products": [
+    {
+      "name": "妙三多",
+      "type": "灭活三联疫苗",
+      "species": "猫",
+      "category": "猫核心疫苗 / FVRCP",
+      "verification": "临床使用前核对当前批次中文标签、兽药批准/注册信息、批号、有效期、冷链记录及产品真伪。",
+      "product_name": "妙三多®（Fel-O-Vax® PCT）",
+      "generic_name_zh": "猫鼻气管炎、嵌杯病毒病、泛白细胞减少症三联灭活疫苗",
+      "generic_name_en": "Feline Rhinotracheitis-Calici-Panleukopenia Vaccine, Killed Virus",
+      "manufacturer": "硕腾（Zoetis）；中国市场本土化生产由硕腾生物制药有限公司（苏州）供应",
+      "age": "8周龄及以上健康猫（以当前批次官方说明书为准）",
+      "indications": "用于预防猫鼻气管炎、嵌杯病毒病和泛白细胞减少症（猫瘟）。",
+      "antigens": "灭活猫鼻气管炎病毒605株、猫嵌杯病毒255株、泛白细胞减少症病毒Cu-4株（公开官方产品资料）；当前批次以随产品说明书为准。",
+      "route": "皮下或肌肉注射（公开官方产品资料；当前批次按标签执行）",
+      "dose": "每猫1 mL/1头份。",
+      "schedule": "公开官方产品资料：8周龄或以上健康猫首免，3–4周后加强；12周龄以下首免者应在12–16周龄时加强；之后每年重复接种1头份。实际免疫程序应结合年龄、母源抗体、既往免疫史及当前官方说明书/指南由执业兽医确定。",
+      "storage": "2–8℃冷藏保存；切勿冻结。公开产品资料标示有效期24个月，实际以当前批次标签为准。",
+      "adverse_reactions": "个别免疫猫可能出现过敏反应；接种机构应具备处理急性过敏反应的条件。",
+      "precautions": "仅用于健康猫；开封后一次用完；接种时执行常规无菌操作；使用前充分摇匀并使疫苗达到适宜使用状态。当前批次辅料/禁忌以官方说明书为准。",
+      "specification": "1头份/瓶；公开资料另列10头份/瓶规格。",
+      "registration": "公开历史产品资料：进口兽药注册证号（2013）外兽药证字54号；注册信息可能随产品本土化生产/注册变更而更新，不能替代当前批次证照核验。",
+      "summary": "硕腾旗下猫用FVRCP核心疫苗，覆盖猫泛白细胞减少症、猫鼻气管炎和猫嵌杯病毒病三种核心传染病。",
+      "source": "硕腾中国官方产品资料",
+      "source_url": "https://www.zoetis.cn/产品服务/宠物产品/疫苗家族",
+      "source_note": "官方公开产品资料页面同时注明部分名称/注册信息可能存在滞后，当前批次以实际官方标签为准。",
+      "label_card": {
+        "basic": {
+          "product_name": "妙三多®（Fel-O-Vax® PCT）",
+          "generic_name_zh": "猫鼻气管炎、嵌杯病毒病、泛白细胞减少症三联灭活疫苗",
+          "generic_name_en": "Feline Rhinotracheitis-Calici-Panleukopenia Vaccine, Killed Virus",
+          "type": "灭活三联疫苗",
+          "category": "猫核心疫苗 / FVRCP",
+          "manufacturer": "硕腾（Zoetis）；中国市场本土化生产由硕腾生物制药有限公司（苏州）供应",
+          "species": "猫",
+          "specification": "1头份/瓶；公开资料另列10头份/瓶规格。"
+        },
+        "indications": "用于预防猫鼻气管炎、嵌杯病毒病和泛白细胞减少症（猫瘟）。",
+        "active_antigens": "灭活猫鼻气管炎病毒605株、猫嵌杯病毒255株、泛白细胞减少症病毒Cu-4株（公开官方产品资料）；当前批次以随产品说明书为准。",
+        "dose_use": {
+          "age": "8周龄及以上健康猫（以当前批次官方说明书为准）",
+          "dose": "每猫1 mL/1头份。",
+          "route": "皮下或肌肉注射（公开官方产品资料；当前批次按标签执行）",
+          "schedule": "公开官方产品资料：8周龄或以上健康猫首免，3–4周后加强；12周龄以下首免者应在12–16周龄时加强；之后每年重复接种1头份。实际免疫程序应结合年龄、母源抗体、既往免疫史及当前官方说明书/指南由执业兽医确定。"
+        },
+        "storage": "2–8℃冷藏保存；切勿冻结。公开产品资料标示有效期24个月，实际以当前批次标签为准。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "仅用于健康猫；开封后一次用完；接种时执行常规无菌操作；使用前充分摇匀并使疫苗达到适宜使用状态。当前批次辅料/禁忌以官方说明书为准。",
+        "adverse_reactions": "个别免疫猫可能出现过敏反应；接种机构应具备处理急性过敏反应的条件。",
+        "registration": "公开历史产品资料：进口兽药注册证号（2013）外兽药证字54号；注册信息可能随产品本土化生产/注册变更而更新，不能替代当前批次证照核验。",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、兽药批准/注册信息、批号、有效期、冷链记录及产品真伪。",
+          "source": "硕腾中国官方产品资料",
+          "source_note": "官方公开产品资料页面同时注明部分名称/注册信息可能存在滞后，当前批次以实际官方标签为准。",
+          "source_url": "https://www.zoetis.cn/产品服务/宠物产品/疫苗家族"
+        }
+      }
+    },
+    {
+      "name": "喵倍护",
+      "type": "疫苗",
+      "species": "猫",
+      "category": "猫核心疫苗 / 猫三联",
+      "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、适应症、规格及冷链要求。",
+      "product_name": "喵倍护",
+      "summary": "猫用三联疫苗产品；用于猫核心传染病免疫。具体抗原组合、毒株、免疫程序和注册信息必须以当前批次官方说明书核对。",
+      "indications": "具体预防病种以当前官方批准说明书为准。",
+      "source": "当前产品官方标签/兽药信息数据库",
+      "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+      "label_card": {
+        "basic": {
+          "product_name": "喵倍护",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "疫苗",
+          "category": "猫核心疫苗 / 猫三联",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "猫",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "具体预防病种以当前官方批准说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、适应症、规格及冷链要求。",
+          "source": "当前产品官方标签/兽药信息数据库",
+          "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "卫佳伍",
+      "type": "疫苗",
+      "species": "犬",
+      "category": "犬核心多联",
+      "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、生产企业、规格及冷链要求。",
+      "product_name": "卫佳伍",
+      "summary": "犬用核心多联疫苗产品；具体覆盖病原、毒株、接种程序和注册信息以当前批次官方说明书为准。",
+      "indications": "具体预防病种以当前官方批准说明书为准。",
+      "source": "产品官方标签/兽药信息数据库",
+      "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+      "label_card": {
+        "basic": {
+          "product_name": "卫佳伍",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "疫苗",
+          "category": "犬核心多联",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "犬",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "具体预防病种以当前官方批准说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、生产企业、规格及冷链要求。",
+          "source": "产品官方标签/兽药信息数据库",
+          "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "卫佳捌",
+      "type": "疫苗",
+      "species": "犬",
+      "category": "犬多联",
+      "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、生产企业、规格及冷链要求。",
+      "product_name": "卫佳捌",
+      "summary": "犬用核心多联疫苗产品；具体覆盖病原、毒株、接种程序和注册信息以当前批次官方说明书为准。",
+      "indications": "具体预防病种以当前官方批准说明书为准。",
+      "source": "产品官方标签/兽药信息数据库",
+      "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+      "label_card": {
+        "basic": {
+          "product_name": "卫佳捌",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "疫苗",
+          "category": "犬多联",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "犬",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "具体预防病种以当前官方批准说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "请核对当前批次兽药批准文号/注册信息、中文说明书、生产企业、规格及冷链要求。",
+          "source": "产品官方标签/兽药信息数据库",
+          "source_note": "未在此处臆造具体毒株、剂量或免疫程序。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "犬细小病毒单克隆抗体",
+      "type": "生物制品",
+      "species": "犬",
+      "category": "单克隆抗体",
+      "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+      "product_name": "犬细小病毒单克隆抗体",
+      "summary": "犬用单克隆抗体。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+      "source": "当前产品官方标签/兽药信息数据库",
+      "label_card": {
+        "basic": {
+          "product_name": "犬细小病毒单克隆抗体",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "生物制品",
+          "category": "单克隆抗体",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "犬",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "犬用单克隆抗体。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+          "source": "当前产品官方标签/兽药信息数据库",
+          "source_note": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "犬瘟热单克隆抗体",
+      "type": "生物制品",
+      "species": "犬",
+      "category": "单克隆抗体",
+      "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+      "product_name": "犬瘟热单克隆抗体",
+      "summary": "犬用单克隆抗体。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+      "source": "当前产品官方标签/兽药信息数据库",
+      "label_card": {
+        "basic": {
+          "product_name": "犬瘟热单克隆抗体",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "生物制品",
+          "category": "单克隆抗体",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "犬",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "犬用单克隆抗体。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+          "source": "当前产品官方标签/兽药信息数据库",
+          "source_note": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "猫干扰素",
+      "type": "生物制品",
+      "species": "猫",
+      "category": "干扰素",
+      "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+      "product_name": "猫干扰素",
+      "summary": "猫用干扰素。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+      "source": "当前产品官方标签/兽药信息数据库",
+      "label_card": {
+        "basic": {
+          "product_name": "猫干扰素",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "生物制品",
+          "category": "干扰素",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "猫",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "猫用干扰素。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+          "source": "当前产品官方标签/兽药信息数据库",
+          "source_note": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "犬干扰素",
+      "type": "生物制品",
+      "species": "犬",
+      "category": "干扰素",
+      "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+      "product_name": "犬干扰素",
+      "summary": "犬用干扰素。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+      "source": "当前产品官方标签/兽药信息数据库",
+      "label_card": {
+        "basic": {
+          "product_name": "犬干扰素",
+          "generic_name_zh": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "generic_name_en": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "type": "生物制品",
+          "category": "干扰素",
+          "manufacturer": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "species": "犬",
+          "specification": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "indications": "犬用干扰素。具体企业、批准文号、规格、适应症、剂量和用法必须以当前产品官方说明书为准。",
+        "active_antigens": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "dose_use": {
+          "age": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "dose": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "route": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "schedule": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。"
+        },
+        "storage": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "contraindications": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "warnings": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "adverse_reactions": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "registration": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+        "evidence": {
+          "verification": "具体企业、批准文号、规格和适应症必须按官方兽药信息核验",
+          "source": "当前产品官方标签/兽药信息数据库",
+          "source_note": "数据库未收录；不得据此推定具体制剂标签内容，使用前核对当前官方说明书。",
+          "source_url": ""
+        }
+      }
+    },
+    {
+      "name": "宠必威®锐必威",
+      "product_name": "宠必威®锐必威",
+      "generic_name_zh": "犬、猫狂犬病灭活疫苗",
+      "type": "灭活病毒疫苗",
+      "species": "犬、猫",
+      "category": "狂犬病灭活疫苗",
+      "manufacturer": "英特威国际有限公司 Intervet International B.V.",
+      "indications": "用于预防犬、猫狂犬病",
+      "antigens": "灭活狂犬病病毒 Pasteur RIV 株（公开说明书）",
+      "dose": "每只1 mL",
+      "route": "皮下或肌肉注射",
+      "schedule": "3月龄以上犬、猫；公开说明书为每36个月加强一次，当前标签优先",
+      "storage": "2–8℃避光保存；不得冻结；有效期以当前批次标签为准",
+      "adverse_reactions": "偶见全身过敏反应",
+      "precautions": "仅用于健康动物；接种机构应具备处理急性过敏反应条件",
+      "registration": "2026年变更注册；当前证书与批次以官方证照核验为准",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/nybgb/2022/202205/202205/P020220616319546469813.pdf",
+      "source_note": "农业农村部公报公开说明书；2026年公告第995号显示该产品发生变更注册并发布修订标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "宠必威®锐必威",
+          "generic_name_zh": "犬、猫狂犬病灭活疫苗",
+          "generic_name_en": null,
+          "type": "灭活病毒疫苗",
+          "category": "狂犬病灭活疫苗",
+          "manufacturer": "英特威国际有限公司 Intervet International B.V.",
+          "species": "犬、猫",
+          "specification": null
+        },
+        "indications": "用于预防犬、猫狂犬病",
+        "active_antigens": "灭活狂犬病病毒 Pasteur RIV 株（公开说明书）",
+        "dose_use": {
+          "age": null,
+          "dose": "每只1 mL",
+          "route": "皮下或肌肉注射",
+          "schedule": "3月龄以上犬、猫；公开说明书为每36个月加强一次，当前标签优先"
+        },
+        "storage": "2–8℃避光保存；不得冻结；有效期以当前批次标签为准",
+        "contraindications": null,
+        "warnings": "仅用于健康动物；接种机构应具备处理急性过敏反应条件",
+        "adverse_reactions": "偶见全身过敏反应",
+        "registration": "2026年变更注册；当前证书与批次以官方证照核验为准",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公报公开说明书；2026年公告第995号显示该产品发生变更注册并发布修订标签。",
+          "source_url": "https://www.moa.gov.cn/nybgb/2022/202205/202205/P020220616319546469813.pdf"
+        }
+      }
+    },
+    {
+      "name": "宠必威®优免康",
+      "product_name": "宠必威®优免康",
+      "generic_name_zh": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗",
+      "type": "活病毒疫苗",
+      "species": "犬",
+      "category": "犬核心四联活疫苗",
+      "manufacturer": "英特威国际有限公司 / 默沙东（宁波）动物保健科技有限公司（转国内生产）",
+      "indications": "用于预防犬瘟热、传染性肝炎、细小病毒病和副流感",
+      "antigens": "Onderstepoort株 + Manhattan LPV3株 + 154株 + Cornell株",
+      "dose": "1头份/犬",
+      "route": "按当前说明书执行",
+      "schedule": "具体基础免疫与加强程序以当前标签为准",
+      "storage": "2–8℃；有效期以当前批次标签为准",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬；严格按说明书执行",
+      "registration": "（2019）外兽药证字05号；转国内生产信息见2025年第978号公告",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/govpublic/xmsyj/202401/P020240117637563029882.pdf",
+      "source_note": "农业农村部公开说明书；2025年公告第978号确认该产品转国内生产并发布说明书和标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "宠必威®优免康",
+          "generic_name_zh": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗",
+          "generic_name_en": null,
+          "type": "活病毒疫苗",
+          "category": "犬核心四联活疫苗",
+          "manufacturer": "英特威国际有限公司 / 默沙东（宁波）动物保健科技有限公司（转国内生产）",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬瘟热、传染性肝炎、细小病毒病和副流感",
+        "active_antigens": "Onderstepoort株 + Manhattan LPV3株 + 154株 + Cornell株",
+        "dose_use": {
+          "age": null,
+          "dose": "1头份/犬",
+          "route": "按当前说明书执行",
+          "schedule": "具体基础免疫与加强程序以当前标签为准"
+        },
+        "storage": "2–8℃；有效期以当前批次标签为准",
+        "contraindications": null,
+        "warnings": "仅用于健康犬；严格按说明书执行",
+        "adverse_reactions": null,
+        "registration": "（2019）外兽药证字05号；转国内生产信息见2025年第978号公告",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公开说明书；2025年公告第978号确认该产品转国内生产并发布说明书和标签。",
+          "source_url": "https://www.moa.gov.cn/govpublic/xmsyj/202401/P020240117637563029882.pdf"
+        }
+      }
+    },
+    {
+      "name": "宠必威®乐必妥",
+      "product_name": "宠必威®乐必妥",
+      "generic_name_zh": "犬钩端螺旋体病（犬型、黄疸出血型）二价灭活疫苗",
+      "type": "灭活细菌疫苗",
+      "species": "犬",
+      "category": "犬钩端螺旋体二价灭活疫苗",
+      "manufacturer": "英特威国际有限公司",
+      "indications": "用于预防犬型和黄疸出血型钩端螺旋体引起的犬钩端螺旋体病",
+      "antigens": "犬型钩端螺旋体CA-12-000株；黄疸出血型钩端螺旋体820K株",
+      "dose": "每只犬1 mL",
+      "route": "皮下注射",
+      "schedule": "幼犬8周龄后开始，间隔2–4周第二次；以后每年加强一次",
+      "storage": "2–8℃；避免冻结",
+      "adverse_reactions": "偶见轻微自行消失的过敏反应；接种后数日可有局部反应",
+      "precautions": "仅用于健康犬；使用前摇匀；无菌操作；公开说明书允许妊娠犬接种",
+      "registration": "（2018）外兽药证字44号；2024年再注册",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/govpublic/xmsyj/202401/P020240117637563029882.pdf",
+      "source_note": "农业农村部公开说明书明确主要成分、1 mL剂量和基础免疫程序。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "宠必威®乐必妥",
+          "generic_name_zh": "犬钩端螺旋体病（犬型、黄疸出血型）二价灭活疫苗",
+          "generic_name_en": null,
+          "type": "灭活细菌疫苗",
+          "category": "犬钩端螺旋体二价灭活疫苗",
+          "manufacturer": "英特威国际有限公司",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬型和黄疸出血型钩端螺旋体引起的犬钩端螺旋体病",
+        "active_antigens": "犬型钩端螺旋体CA-12-000株；黄疸出血型钩端螺旋体820K株",
+        "dose_use": {
+          "age": null,
+          "dose": "每只犬1 mL",
+          "route": "皮下注射",
+          "schedule": "幼犬8周龄后开始，间隔2–4周第二次；以后每年加强一次"
+        },
+        "storage": "2–8℃；避免冻结",
+        "contraindications": null,
+        "warnings": "仅用于健康犬；使用前摇匀；无菌操作；公开说明书允许妊娠犬接种",
+        "adverse_reactions": "偶见轻微自行消失的过敏反应；接种后数日可有局部反应",
+        "registration": "（2018）外兽药证字44号；2024年再注册",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公开说明书明确主要成分、1 mL剂量和基础免疫程序。",
+          "source_url": "https://www.moa.gov.cn/govpublic/xmsyj/202401/P020240117637563029882.pdf"
+        }
+      }
+    },
+    {
+      "name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾）",
+      "product_name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾）",
+      "generic_name_zh": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗",
+      "type": "活病毒疫苗",
+      "species": "犬",
+      "category": "犬四联活疫苗",
+      "manufacturer": "硕腾公司美国林肯厂 Zoetis Inc.",
+      "indications": "用于预防犬瘟热、腺病毒2型相关疾病、副流感和细小病毒病",
+      "antigens": "活疫苗；毒株与含量以当前官方标签为准",
+      "dose": "1头份/犬",
+      "route": "按当前说明书执行",
+      "schedule": "按当前官方说明书执行",
+      "storage": "2–8℃；当前批次标签优先",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬；接种前后按说明书管理",
+      "registration": "（2020）外兽药证字63号；2025年再注册",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202504/t20250428_6473593.htm",
+      "source_note": "农业农村部第902号公告确认2025年再注册并发布修订说明书、标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾）",
+          "generic_name_zh": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗",
+          "generic_name_en": null,
+          "type": "活病毒疫苗",
+          "category": "犬四联活疫苗",
+          "manufacturer": "硕腾公司美国林肯厂 Zoetis Inc.",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬瘟热、腺病毒2型相关疾病、副流感和细小病毒病",
+        "active_antigens": "活疫苗；毒株与含量以当前官方标签为准",
+        "dose_use": {
+          "age": null,
+          "dose": "1头份/犬",
+          "route": "按当前说明书执行",
+          "schedule": "按当前官方说明书执行"
+        },
+        "storage": "2–8℃；当前批次标签优先",
+        "contraindications": null,
+        "warnings": "仅用于健康犬；接种前后按说明书管理",
+        "adverse_reactions": null,
+        "registration": "（2020）外兽药证字63号；2025年再注册",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第902号公告确认2025年再注册并发布修订说明书、标签。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202504/t20250428_6473593.htm"
+        }
+      }
+    },
+    {
+      "name": "犬细小病毒病活疫苗（NL-35-D株）",
+      "product_name": "犬细小病毒病活疫苗（NL-35-D株）",
+      "generic_name_zh": "犬细小病毒病活疫苗（NL-35-D株）",
+      "type": "活病毒疫苗",
+      "species": "犬",
+      "category": "犬细小病毒活疫苗",
+      "manufacturer": "硕腾公司美国林肯厂 Zoetis Inc.",
+      "indications": "用于预防犬细小病毒病",
+      "antigens": "犬细小病毒 NL-35-D株",
+      "dose": null,
+      "route": null,
+      "schedule": "按当前说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬",
+      "registration": "历史进口兽药注册信息；当前批次需核验",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202006/t20200619_6346959.htm",
+      "source_note": "农业农村部第309号进口兽药注册目录；2020年再注册资料。当前注册状态需核对最新目录。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "犬细小病毒病活疫苗（NL-35-D株）",
+          "generic_name_zh": "犬细小病毒病活疫苗（NL-35-D株）",
+          "generic_name_en": null,
+          "type": "活病毒疫苗",
+          "category": "犬细小病毒活疫苗",
+          "manufacturer": "硕腾公司美国林肯厂 Zoetis Inc.",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬细小病毒病",
+        "active_antigens": "犬细小病毒 NL-35-D株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按当前说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康犬",
+        "adverse_reactions": null,
+        "registration": "历史进口兽药注册信息；当前批次需核验",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第309号进口兽药注册目录；2020年再注册资料。当前注册状态需核对最新目录。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202006/t20200619_6346959.htm"
+        }
+      }
+    },
+    {
+      "name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（RPVF0304株+RPVF0207株+RPVF0110株）",
+      "product_name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（RPVF0304株+RPVF0207株+RPVF0110株）",
+      "generic_name_zh": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（RPVF0304株+RPVF0207株+RPVF0110株）",
+      "type": "灭活三联疫苗",
+      "species": "猫",
+      "category": "猫核心FVRCP灭活疫苗",
+      "manufacturer": "瑞普生物股份有限公司等",
+      "indications": "用于预防猫鼻气管炎、猫杯状病毒病和猫泛白细胞减少症",
+      "antigens": "RPVF0304株 + RPVF0207株 + RPVF0110株",
+      "dose": null,
+      "route": null,
+      "schedule": "按当前中文说明书执行",
+      "storage": "2–8℃；有效期以标签为准",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康猫；应避免应激及与发病动物接触",
+      "registration": "（2025）新兽药证字127号对应生产单位目录；当前产品批准信息需核验",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202308/t20230823_6434915.htm",
+      "source_note": "农业农村部第701号公告及其说明书、标签；2025年第970号公告列入相关产品目录。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（RPVF0304株+RPVF0207株+RPVF0110株）",
+          "generic_name_zh": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（RPVF0304株+RPVF0207株+RPVF0110株）",
+          "generic_name_en": null,
+          "type": "灭活三联疫苗",
+          "category": "猫核心FVRCP灭活疫苗",
+          "manufacturer": "瑞普生物股份有限公司等",
+          "species": "猫",
+          "specification": null
+        },
+        "indications": "用于预防猫鼻气管炎、猫杯状病毒病和猫泛白细胞减少症",
+        "active_antigens": "RPVF0304株 + RPVF0207株 + RPVF0110株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按当前中文说明书执行"
+        },
+        "storage": "2–8℃；有效期以标签为准",
+        "contraindications": null,
+        "warnings": "仅用于健康猫；应避免应激及与发病动物接触",
+        "adverse_reactions": null,
+        "registration": "（2025）新兽药证字127号对应生产单位目录；当前产品批准信息需核验",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第701号公告及其说明书、标签；2025年第970号公告列入相关产品目录。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202308/t20230823_6434915.htm"
+        }
+      }
+    },
+    {
+      "name": "猫泛白细胞减少症、鼻气管炎、杯状病毒病三联灭活疫苗（HBX05株+BJS01株+BJH13株）",
+      "product_name": "猫泛白细胞减少症、鼻气管炎、杯状病毒病三联灭活疫苗（HBX05株+BJS01株+BJH13株）",
+      "generic_name_zh": "猫泛白细胞减少症、鼻气管炎、杯状病毒病三联灭活疫苗（HBX05株+BJS01株+BJH13株）",
+      "type": "灭活三联疫苗",
+      "species": "猫",
+      "category": "猫核心FVRCP灭活疫苗",
+      "manufacturer": "泰州博莱得利生物科技有限公司等",
+      "indications": "用于预防猫泛白细胞减少症、鼻气管炎和杯状病毒病",
+      "antigens": "HBX05株 + BJS01株 + BJH13株",
+      "dose": null,
+      "route": null,
+      "schedule": "按当前中文说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康猫",
+      "registration": "（2025）新兽药证字72号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/nybgb/2025/202510/202510/P020251022548037158034.pdf",
+      "source_note": "农业农村部公报列明2025年新兽药注册证书（2025）新兽药证字72号。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "猫泛白细胞减少症、鼻气管炎、杯状病毒病三联灭活疫苗（HBX05株+BJS01株+BJH13株）",
+          "generic_name_zh": "猫泛白细胞减少症、鼻气管炎、杯状病毒病三联灭活疫苗（HBX05株+BJS01株+BJH13株）",
+          "generic_name_en": null,
+          "type": "灭活三联疫苗",
+          "category": "猫核心FVRCP灭活疫苗",
+          "manufacturer": "泰州博莱得利生物科技有限公司等",
+          "species": "猫",
+          "specification": null
+        },
+        "indications": "用于预防猫泛白细胞减少症、鼻气管炎和杯状病毒病",
+        "active_antigens": "HBX05株 + BJS01株 + BJH13株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按当前中文说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康猫",
+        "adverse_reactions": null,
+        "registration": "（2025）新兽药证字72号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公报列明2025年新兽药注册证书（2025）新兽药证字72号。",
+          "source_url": "https://www.moa.gov.cn/nybgb/2025/202510/202510/P020251022548037158034.pdf"
+        }
+      }
+    },
+    {
+      "name": "猫泛白细胞减少症、杯状病毒病、鼻气管炎三联灭活疫苗（708株+60株+64株）",
+      "product_name": "猫泛白细胞减少症、杯状病毒病、鼻气管炎三联灭活疫苗（708株+60株+64株）",
+      "generic_name_zh": "猫泛白细胞减少症、杯状病毒病、鼻气管炎三联灭活疫苗（708株+60株+64株）",
+      "type": "灭活三联疫苗",
+      "species": "猫",
+      "category": "猫核心FVRCP灭活疫苗",
+      "manufacturer": "相关注册企业",
+      "indications": "用于预防猫泛白细胞减少症、猫杯状病毒病和猫鼻气管炎",
+      "antigens": "708株 + 60株 + 64株",
+      "dose": null,
+      "route": "详见说明书",
+      "schedule": "二免后第7日产生免疫力；免疫期12个月（公开标签）",
+      "storage": "2–8℃；有效期27个月",
+      "adverse_reactions": "极少数动物可能发生过敏反应",
+      "precautions": "妊娠期和哺乳期猫不推荐使用；仅用于健康动物",
+      "registration": "按公告附件说明书核验",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/nybgb/2023/202312/202312/P020231226576768032571.pdf",
+      "source_note": "农业农村部公开说明书：2–8℃保存，有效期27个月；二免后第7日产生免疫力，免疫期12个月。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "猫泛白细胞减少症、杯状病毒病、鼻气管炎三联灭活疫苗（708株+60株+64株）",
+          "generic_name_zh": "猫泛白细胞减少症、杯状病毒病、鼻气管炎三联灭活疫苗（708株+60株+64株）",
+          "generic_name_en": null,
+          "type": "灭活三联疫苗",
+          "category": "猫核心FVRCP灭活疫苗",
+          "manufacturer": "相关注册企业",
+          "species": "猫",
+          "specification": null
+        },
+        "indications": "用于预防猫泛白细胞减少症、猫杯状病毒病和猫鼻气管炎",
+        "active_antigens": "708株 + 60株 + 64株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": "详见说明书",
+          "schedule": "二免后第7日产生免疫力；免疫期12个月（公开标签）"
+        },
+        "storage": "2–8℃；有效期27个月",
+        "contraindications": null,
+        "warnings": "妊娠期和哺乳期猫不推荐使用；仅用于健康动物",
+        "adverse_reactions": "极少数动物可能发生过敏反应",
+        "registration": "按公告附件说明书核验",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公开说明书：2–8℃保存，有效期27个月；二免后第7日产生免疫力，免疫期12个月。",
+          "source_url": "https://www.moa.gov.cn/nybgb/2023/202312/202312/P020231226576768032571.pdf"
+        }
+      }
+    },
+    {
+      "name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（HBJ06株+CHZ05株+PSY01株）",
+      "product_name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（HBJ06株+CHZ05株+PSY01株）",
+      "generic_name_zh": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（HBJ06株+CHZ05株+PSY01株）",
+      "type": "灭活三联疫苗",
+      "species": "猫",
+      "category": "猫核心FVRCP灭活疫苗",
+      "manufacturer": "中牧实业股份有限公司",
+      "indications": "用于预防猫鼻气管炎、杯状病毒病和泛白细胞减少症",
+      "antigens": "HBJ06株 + CHZ05株 + PSY01株",
+      "dose": null,
+      "route": null,
+      "schedule": "按2026年批准说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康猫",
+      "registration": "（2026）新兽药证字43号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202603/t20260325_6482587.htm",
+      "source_note": "农业农村部第1002号公告：2026年新兽药证字43号，并发布说明书和标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（HBJ06株+CHZ05株+PSY01株）",
+          "generic_name_zh": "猫鼻气管炎、杯状病毒病、泛白细胞减少症三联灭活疫苗（HBJ06株+CHZ05株+PSY01株）",
+          "generic_name_en": null,
+          "type": "灭活三联疫苗",
+          "category": "猫核心FVRCP灭活疫苗",
+          "manufacturer": "中牧实业股份有限公司",
+          "species": "猫",
+          "specification": null
+        },
+        "indications": "用于预防猫鼻气管炎、杯状病毒病和泛白细胞减少症",
+        "active_antigens": "HBJ06株 + CHZ05株 + PSY01株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按2026年批准说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康猫",
+        "adverse_reactions": null,
+        "registration": "（2026）新兽药证字43号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第1002号公告：2026年新兽药证字43号，并发布说明书和标签。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202603/t20260325_6482587.htm"
+        }
+      }
+    },
+    {
+      "name": "猫泛白细胞减少症病毒冻干卵黄抗体",
+      "product_name": "猫泛白细胞减少症病毒冻干卵黄抗体",
+      "generic_name_zh": "猫泛白细胞减少症病毒冻干卵黄抗体",
+      "type": "特异性抗体",
+      "species": "猫",
+      "category": "特异性卵黄抗体/被动免疫生物制品",
+      "manufacturer": "长春西诺生物科技有限公司、吉林农业大学",
+      "indications": "用于猫泛白细胞减少症相关被动免疫/治疗支持；具体适应症以批准说明书为准",
+      "antigens": "猫泛白细胞减少症病毒特异性抗体",
+      "dose": null,
+      "route": null,
+      "schedule": "按批准说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "必须严格按批准适应症与剂量使用",
+      "registration": "（2026）新兽药证字45号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202604/t20260416_6483273.htm",
+      "source_note": "农业农村部第1011号公告：2026年新兽药证字45号，并发布说明书和标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "猫泛白细胞减少症病毒冻干卵黄抗体",
+          "generic_name_zh": "猫泛白细胞减少症病毒冻干卵黄抗体",
+          "generic_name_en": null,
+          "type": "特异性抗体",
+          "category": "特异性卵黄抗体/被动免疫生物制品",
+          "manufacturer": "长春西诺生物科技有限公司、吉林农业大学",
+          "species": "猫",
+          "specification": null
+        },
+        "indications": "用于猫泛白细胞减少症相关被动免疫/治疗支持；具体适应症以批准说明书为准",
+        "active_antigens": "猫泛白细胞减少症病毒特异性抗体",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按批准说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "必须严格按批准适应症与剂量使用",
+        "adverse_reactions": null,
+        "registration": "（2026）新兽药证字45号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第1011号公告：2026年新兽药证字45号，并发布说明书和标签。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202604/t20260416_6483273.htm"
+        }
+      }
+    },
+    {
+      "name": "犬瘟热、细小病毒病二联活疫苗（LT90株+JM35株）",
+      "product_name": "犬瘟热、细小病毒病二联活疫苗（LT90株+JM35株）",
+      "generic_name_zh": "犬瘟热、细小病毒病二联活疫苗（LT90株+JM35株）",
+      "type": "活病毒二联疫苗",
+      "species": "犬",
+      "category": "犬瘟热/细小病毒二联活疫苗",
+      "manufacturer": "普莱柯生物工程股份有限公司等",
+      "indications": "用于预防犬瘟热和犬细小病毒病",
+      "antigens": "LT90株 + JM35株",
+      "dose": null,
+      "route": null,
+      "schedule": "按批准说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬",
+      "registration": "（2026）新兽药证字47号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202604/t20260416_6483273.htm",
+      "source_note": "农业农村部第1011号公告：2026年新兽药证字47号。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "犬瘟热、细小病毒病二联活疫苗（LT90株+JM35株）",
+          "generic_name_zh": "犬瘟热、细小病毒病二联活疫苗（LT90株+JM35株）",
+          "generic_name_en": null,
+          "type": "活病毒二联疫苗",
+          "category": "犬瘟热/细小病毒二联活疫苗",
+          "manufacturer": "普莱柯生物工程股份有限公司等",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬瘟热和犬细小病毒病",
+        "active_antigens": "LT90株 + JM35株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按批准说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康犬",
+        "adverse_reactions": null,
+        "registration": "（2026）新兽药证字47号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第1011号公告：2026年新兽药证字47号。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202604/t20260416_6483273.htm"
+        }
+      }
+    },
+    {
+      "name": "狂犬病冻干灭活疫苗（CTN-1株）",
+      "product_name": "狂犬病冻干灭活疫苗（CTN-1株）",
+      "generic_name_zh": "狂犬病冻干灭活疫苗（CTN-1株）",
+      "type": "灭活病毒疫苗",
+      "species": "犬、猫",
+      "category": "狂犬病灭活疫苗",
+      "manufacturer": "长春西诺生物科技有限公司、长春卓谊生物股份有限公司",
+      "indications": "用于预防狂犬病",
+      "antigens": "灭活狂犬病病毒CTN-1株",
+      "dose": null,
+      "route": null,
+      "schedule": "按批准说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于批准靶动物",
+      "registration": "（2025）新兽药证字47号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://www.moa.gov.cn/nybgb/2025/202507/202507/P020250723554443056478.pdf",
+      "source_note": "农业农村部公报列明2025年新兽药证字47号；具体靶动物、剂量和程序以批准说明书为准。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "狂犬病冻干灭活疫苗（CTN-1株）",
+          "generic_name_zh": "狂犬病冻干灭活疫苗（CTN-1株）",
+          "generic_name_en": null,
+          "type": "灭活病毒疫苗",
+          "category": "狂犬病灭活疫苗",
+          "manufacturer": "长春西诺生物科技有限公司、长春卓谊生物股份有限公司",
+          "species": "犬、猫",
+          "specification": null
+        },
+        "indications": "用于预防狂犬病",
+        "active_antigens": "灭活狂犬病病毒CTN-1株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按批准说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于批准靶动物",
+        "adverse_reactions": null,
+        "registration": "（2025）新兽药证字47号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部公报列明2025年新兽药证字47号；具体靶动物、剂量和程序以批准说明书为准。",
+          "source_url": "https://www.moa.gov.cn/nybgb/2025/202507/202507/P020250723554443056478.pdf"
+        }
+      }
+    },
+    {
+      "name": "狂犬病灭活疫苗（SAD株）",
+      "product_name": "狂犬病灭活疫苗（SAD株）",
+      "generic_name_zh": "狂犬病灭活疫苗（SAD株）",
+      "type": "灭活病毒疫苗",
+      "species": "犬、猫",
+      "category": "狂犬病灭活疫苗",
+      "manufacturer": "常州同泰生物药业科技股份有限公司等",
+      "indications": "用于预防狂犬病",
+      "antigens": "灭活狂犬病病毒SAD株",
+      "dose": null,
+      "route": null,
+      "schedule": "按当前批准说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康动物",
+      "registration": "（2011）新兽药证字49号；2025年变更注册",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202503/t20250324_6472169.htm",
+      "source_note": "农业农村部第892号公告显示该产品2025年发生说明书、标签等变更。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "狂犬病灭活疫苗（SAD株）",
+          "generic_name_zh": "狂犬病灭活疫苗（SAD株）",
+          "generic_name_en": null,
+          "type": "灭活病毒疫苗",
+          "category": "狂犬病灭活疫苗",
+          "manufacturer": "常州同泰生物药业科技股份有限公司等",
+          "species": "犬、猫",
+          "specification": null
+        },
+        "indications": "用于预防狂犬病",
+        "active_antigens": "灭活狂犬病病毒SAD株",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按当前批准说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康动物",
+        "adverse_reactions": null,
+        "registration": "（2011）新兽药证字49号；2025年变更注册",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第892号公告显示该产品2025年发生说明书、标签等变更。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202503/t20250324_6472169.htm"
+        }
+      }
+    },
+    {
+      "name": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗（Onderstepoort株+Manhattan LPV3株+154株+Cornell株）",
+      "product_name": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗（Onderstepoort株+Manhattan LPV3株+154株+Cornell株）",
+      "generic_name_zh": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗",
+      "type": "活病毒疫苗",
+      "species": "犬",
+      "category": "犬四联活疫苗",
+      "manufacturer": "默沙东（宁波）动物保健科技有限公司 / 英特威国际有限公司",
+      "indications": "用于预防犬瘟热、传染性肝炎、细小病毒病和副流感",
+      "antigens": "Onderstepoort株 + Manhattan LPV3株 + 154株 + Cornell株",
+      "dose": "1头份/犬",
+      "route": "按当前说明书执行",
+      "schedule": "按当前标签核验",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬",
+      "registration": "（2019）外兽药证字05号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202512/t20251223_6480042.htm",
+      "source_note": "农业农村部第978号公告确认2025年转国内生产并发布说明书、标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗（Onderstepoort株+Manhattan LPV3株+154株+Cornell株）",
+          "generic_name_zh": "犬瘟热、传染性肝炎、细小病毒病、副流感四联活疫苗",
+          "generic_name_en": null,
+          "type": "活病毒疫苗",
+          "category": "犬四联活疫苗",
+          "manufacturer": "默沙东（宁波）动物保健科技有限公司 / 英特威国际有限公司",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬瘟热、传染性肝炎、细小病毒病和副流感",
+        "active_antigens": "Onderstepoort株 + Manhattan LPV3株 + 154株 + Cornell株",
+        "dose_use": {
+          "age": null,
+          "dose": "1头份/犬",
+          "route": "按当前说明书执行",
+          "schedule": "按当前标签核验"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康犬",
+        "adverse_reactions": null,
+        "registration": "（2019）外兽药证字05号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第978号公告确认2025年转国内生产并发布说明书、标签。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202512/t20251223_6480042.htm"
+        }
+      }
+    },
+    {
+      "name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾2025再注册）",
+      "product_name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾2025再注册）",
+      "generic_name_zh": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗",
+      "type": "活病毒疫苗",
+      "species": "犬",
+      "category": "犬四联活疫苗",
+      "manufacturer": "硕腾公司美国林肯厂",
+      "indications": "用于预防犬瘟热、腺病毒2型、副流感和细小病毒病",
+      "antigens": "活病毒；毒株按当前官方说明书",
+      "dose": null,
+      "route": null,
+      "schedule": "按当前说明书执行",
+      "storage": "按当前标签核验",
+      "adverse_reactions": null,
+      "precautions": "仅用于健康犬",
+      "registration": "（2020）外兽药证字63号",
+      "source": "农业农村部公开说明书/注册公告",
+      "source_url": "https://xmsyj.moa.gov.cn/zwfw/202504/t20250428_6473593.htm",
+      "source_note": "农业农村部第902号公告：2025年再注册并发布修订说明书和标签。",
+      "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+      "label_card": {
+        "basic": {
+          "product_name": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗（硕腾2025再注册）",
+          "generic_name_zh": "犬瘟热、腺病毒2型、副流感、细小病毒病四联活疫苗",
+          "generic_name_en": null,
+          "type": "活病毒疫苗",
+          "category": "犬四联活疫苗",
+          "manufacturer": "硕腾公司美国林肯厂",
+          "species": "犬",
+          "specification": null
+        },
+        "indications": "用于预防犬瘟热、腺病毒2型、副流感和细小病毒病",
+        "active_antigens": "活病毒；毒株按当前官方说明书",
+        "dose_use": {
+          "age": null,
+          "dose": null,
+          "route": null,
+          "schedule": "按当前说明书执行"
+        },
+        "storage": "按当前标签核验",
+        "contraindications": null,
+        "warnings": "仅用于健康犬",
+        "adverse_reactions": null,
+        "registration": "（2020）外兽药证字63号",
+        "evidence": {
+          "verification": "临床使用前核对当前批次中文标签、批准/注册信息、批号、有效期及冷链记录。",
+          "source": "农业农村部公开说明书/注册公告",
+          "source_note": "农业农村部第902号公告：2025年再注册并发布修订说明书和标签。",
+          "source_url": "https://xmsyj.moa.gov.cn/zwfw/202504/t20250428_6473593.htm"
+        }
+      }
+    }
+  ],
+  "database_version": "5.0-companion-biologics-20260902"
+}
