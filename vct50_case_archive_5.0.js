@@ -7,7 +7,7 @@
   const now=()=>new Date().toISOString();
   const safe=(s,d)=>{try{return JSON.parse(s)||d}catch{return d}};
   const val=id=>$(id)?.value??'';
-  const ids=['caseId','caseSpecies','caseBreed','caseAge','caseSex','caseWeight','caseChief','caseHistory','casePast','casePrevent','caseTests','caseResults','caseDx','caseDDx','casePlan','caseAdvice','caseFollow','casePetName','caseOwner','casePhone'];
+  const ids=['caseId','caseSpecies','caseBreed','caseAge','caseSex','caseWeight','caseChief','caseHistory','casePast','casePrevent','caseTests','caseResults','caseDx','caseDDx','casePlan','caseAdvice','caseFollow','casePetName','caseOwner','casePhone','mrVisitTime','mrVisitType','mrVet','mrVetSign','mrExam','mrAssessment','mrAdvice','mrDisclosure'];
   function records(){const a=safe(localStorage.getItem(CASES_KEY),[]);return Array.isArray(a)?a:[]}
   function saveRecords(a){localStorage.setItem(CASES_KEY,JSON.stringify(a.slice(-500)))}
   function capture(){const o={};ids.forEach(id=>o[id]=val(id));o.updatedAt=now();o.ownerName=o.caseOwner;o.ownerPhone=o.casePhone;o.petName=o.casePetName;return o}
