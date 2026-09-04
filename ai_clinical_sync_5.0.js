@@ -1,0 +1,211 @@
+"use strict";
+/* Vet Clinical Toolbox 5.0-r08 · AI Clinical Copilot Bridge
+ * Bidirectional bridge: AI <-> Patient State / Clinical OS.
+ * AI suggestions are NEVER auto-activated as medical orders; clinician review is required.
+ */
+(function(){
+  const $=id=>document.getElementById(id);
+  const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const now=()=>new Date().toISOString();
+  const KEY='vct50_ai_plan_v1';
+  let lastPlan=null;
+  const safe=(s,d)=>{try{return JSON.parse(s)||d}catch{return d}};
+  const asArr=v=>Array.isArray(v)?v:(v==null||v===''?[]:[v]);
+  const txt=v=>Array.isArray(v)?v.join('；'):String(v??'');
+  function patient(){return window.VCT50_PATIENT_STATE||safe(localStorage.getItem('vct50_patient_state'),{})||{}}
+  function osState(){return window.VCT50_CLINICAL_OS_STATE||safe(localStorage.getItem('vct50_clinical_os_state_v2'),{problemList:[],vitals:[],labs:[],timeline:[],tasks:[],goals:[],audit:[]})}
+  function saveOS(s){s.version='5.0-r08';localStorage.setItem('vct50_clinical_os_state_v2',JSON.stringify(s));window.VCT50_CLINICAL_OS_STATE=s}
+  function audit(action,detail){const s=osState();s.audit=Array.isArray(s.audit)?s.audit:[];s.audit.push({time:now(),action,detail:detail||'',patientId:patient().patientId||''});s.audit=s.audit.slice(-300);saveOS(s)}
+  function normalize(raw){
+    const p=raw?.PATIENT||raw?.patient||{};
+    const current=patient();
+    const plan={version:'5.0-r08',generated_at:now(),plan_id:'ai-'+Date.now()+'-'+Math.random().toString(36).slice(2,8),review_status:'Pending Review（待医生审核）',summary:raw?.CLINICAL_SUMMARY||raw?.SUMMARY||raw?.summary||'',confidence:raw?.CONFIDENCE||raw?.confidence||'',patient:{
+      patientId:p.patientId||p.id||current.patientId||'',species:p.species||p.Species||current.species||'',breed:p.breed||current.breed||'',age:p.age||current.age||'',sex:p.sex||current.sex||'',weight:p.weight??current.weight??null,vaccination:p.vaccination||p.vaccine||''
+    },problems:[],red_flags:[],differentials:[],recommended_tests:[],treatment_options:[],medication_options:[],monitoring:[],reassessment:[],evidence:[],safety_warnings:[],raw_text:''};
+    const mapItems=(arr,def='')=>asArr(arr).map(x=>typeof x==='string'?{text:x,priority:def||'P2',status:'Suggested'}:{...x,status:x.status||'Suggested',priority:x.priority||def||'P2'}).filter(x=>x.text||x.name||x.test||x.problem||x.drug);
+    plan.problems=mapItems(raw?.PROBLEMS||raw?.problems,'P2');
+    plan.red_flags=mapItems(raw?.RED_FLAGS||raw?.red_flags,'P0');
+    plan.differentials=mapItems(raw?.DIFFERENTIALS||raw?.differentials,'P2');
+    plan.recommended_tests=mapItems(raw?.RECOMMENDED_TESTS||raw?.recommended_tests,'P1');
+    plan.treatment_options=mapItems(raw?.TREATMENT_OPTIONS||raw?.treatment_options,'P1');
+    plan.medication_options=mapItems(raw?.MEDICATION_OPTIONS||raw?.medication_options,'P1');
+    plan.monitoring=mapItems(raw?.MONITORING||raw?.monitoring,'P2');
+    plan.reassessment=mapItems(raw?.REASSESSMENT||raw?.reassessment,'P1');
+    plan.evidence=mapItems(raw?.EVIDENCE||raw?.evidence,'P2');
+    plan.safety_warnings=mapItems(raw?.SAFETY_WARNINGS||raw?.safety_warnings,'P0');
+    return plan;
+  }
+  function extractJSON(text){
+    const t=String(text||'').trim();
+    const fence=t.match(/```(?:json)?\s*([\s\S]*?)\s*```/i); if(fence) {const x=safe(fence[1],null);if(x)return x}
+    const start=t.indexOf('{'),end=t.lastIndexOf('}'); if(start>=0&&end>start){const x=safe(t.slice(start,end+1),null);if(x)return x}
+    return null;
+  }
+  function label(x){return x.name||x.test||x.problem||x.drug||x.text||x.item||''}
+  function detail(x){return [x.description,x.rationale,x.reason,x.note,x.plan,x.action,x.dose,x.route,x.frequency,x.duration].filter(Boolean).join(' · ')}
+  function renderItem(x,kind,index){
+    const why=x.rationale||x.reason||x.description||'';
+    const support=x.supporting_evidence||x.support||x.for_evidence||'';
+    const against=x.against_evidence||x.contra||x.against||'';
+    const key=`${kind}|${index}`; const checked=x.reviewed!==false; return `<div class="ai-plan-row" data-ai-review-row="${esc(key)}"><div><div><label class="ai-review-check"><input type="checkbox" data-ai-review="${esc(key)}" ${checked?'checked':''}> 医生审核</label> <span class="os-chip ${x.priority==='P0'?'os-red':x.priority==='P1'?'os-amber':x.priority==='P2'?'os-yellow':'os-green'}">${esc(x.priority||'P2')}</span> <b>${esc(label(x))}</b></div>${why?`<div class="os-muted"><b>临床依据：</b>${esc(why)}</div>`:''}${support?`<div class="os-muted"><b>支持证据：</b>${esc(support)}</div>`:''}${against?`<div class="os-muted"><b>反对/缺失证据：</b>${esc(against)}</div>`:''}${detail(x)&&!why?`<div class="os-muted">${esc(detail(x))}</div>`:''}</div><span class="os-chip os-blue">Suggested（AI建议）</span></div>`}
+  function renderPlan(plan){
+    const sec=(title,arr)=>arr.length?`<section class="ai-plan-sec"><h4>${title}</h4>${arr.map((x,i)=>renderItem(x,title,i)).join('')}</section>`:'';
+    const p=plan.patient;
+    const summary=plan.summary||p.summary||'';
+    const confidence=plan.confidence||plan.overall_confidence||'';
+    return `<div class="ai-plan"><div class="ai-plan-head"><div><h3>AI Clinical Decision Support（兽医临床决策支持）</h3><div class="os-muted">${esc(p.species||patient().species||'物种未识别')} · ${esc(p.age||patient().age||'年龄未识别')} · ${esc(p.weight??patient().weight??'')} ${p.weight||patient().weight?'kg':''}</div>${summary?`<div class="ai-summary"><b>Clinical Summary（病例摘要）：</b>${esc(summary)}</div>`:''}${confidence?`<div class="os-muted"><b>推理置信度：</b>${esc(confidence)}</div>`:''}</div><span class="os-chip os-amber">Doctor Review Required（必须医生审核）</span></div>
+      ${sec('PROBLEMS · Problem List（问题列表）',plan.problems)}${sec('RED FLAGS · Red Flags（红旗风险）',plan.red_flags)}${sec('DIFFERENTIALS · Differential Diagnosis（鉴别诊断）',plan.differentials)}${sec('RECOMMENDED TESTS · Next Best Tests（下一项最有价值检查）',plan.recommended_tests)}${sec('TREATMENT OPTIONS · Treatment Strategy（治疗策略）',plan.treatment_options)}${sec('MEDICATION OPTIONS · Medication Safety Review（用药安全审核）',plan.medication_options)}${sec('MONITORING · Monitoring（监测）',plan.monitoring)}${sec('REASSESSMENT · Reassessment（复评）',plan.reassessment)}${sec('EVIDENCE · Evidence（证据与依据）',plan.evidence)}${sec('SAFETY WARNINGS · Safety Warnings（安全警示）',plan.safety_warnings)}
+      <div class="ai-review-note os-note"><b>Doctor Review（医生审核）</b>：默认勾选全部AI建议。取消勾选即可排除某一项；只有勾选项目才会进入 Clinical OS。</div><div class="ai-sync-bar"><button type="button" class="primary" data-ai-action="apply">⚡ Apply Clinical Plan（应用临床计划）</button><button type="button" data-ai-action="sync">＋ Sync to Patient State（同步到患者）</button><button type="button" data-ai-action="reject">✕ Reject（拒绝本次计划）</button></div><div class="os-warning">AI输出属于 Suggested（建议）状态；未经医生确认不得视为诊断或医嘱。不会自动执行药物、输液、麻醉、输血等高风险操作。剂量、适应证、禁忌证、相互作用和复评时限必须由执业兽医结合物种、体重、器官功能、制剂标签及当前指南核验。</div></div>`;
+  }
+  function syncPlanToCase(plan,q){
+    const p=patient();
+    const set=(id,v,overwrite=false)=>{const el=$(id);if(!el||v==null||v==='')return;if(overwrite||!String(el.value||'').trim())el.value=v};
+    set('caseId',p.patientId||plan?.patient?.patientId||'');
+    set('caseSpecies',p.species||plan?.patient?.species||'犬');
+    set('caseBreed',p.breed||plan?.patient?.breed||'');
+    set('caseAge',p.age||plan?.patient?.age||'');
+    set('caseSex',p.sex||plan?.patient?.sex||'');
+    set('caseWeight',p.weight??plan?.patient?.weight??'');
+    if(plan){
+      const problems=(q?.problems||plan.problems||[]).map(label).filter(Boolean);
+      const diffs=(q?.differentials||plan.differentials||[]).map(label).filter(Boolean);
+      const tests=(q?.recommended_tests||plan.recommended_tests||[]).map(x=>label(x)+(detail(x)?' · '+detail(x):'')).filter(Boolean);
+      const tx=(q?.treatment_options||plan.treatment_options||[]).map(x=>label(x)+(detail(x)?' · '+detail(x):'')).filter(Boolean);
+      const meds=(q?.medication_options||plan.medication_options||[]).map(x=>label(x)+(detail(x)?' · '+detail(x):'')).filter(Boolean);
+      const mon=(q?.monitoring||plan.monitoring||[]).map(x=>label(x)+(detail(x)?' · '+detail(x):'')).filter(Boolean);
+      const reass=(q?.reassessment||plan.reassessment||[]).map(x=>label(x)+(detail(x)?' · '+detail(x):'')).filter(Boolean);
+      set('caseChief',p.chief||problems.join('、'));
+      set('caseHistory',p.history||'');
+      set('casePast',p.conditions||p.currentMeds||'');
+      set('caseDx',p.diagnosis||diffs.slice(0,3).join('、'));
+      set('caseDDx',diffs.join('、'));
+      set('caseTests',tests.join('\n'));
+      set('caseResults',plan.summary||'');
+      set('casePlan',[...tx,...meds].join('\n'));
+      set('caseAdvice',[...mon,...reass].join('\n'));
+    }
+    return true;
+  }
+  function syncPatient(plan){
+    const p=plan?.patient||{};const cur=patient();
+    const set=(id,v)=>{if($(id)&&v!==undefined&&v!==null&&v!=='')$(id).value=v};
+    // The current Patient State is authoritative. AI may enrich blank fields, but must not replace the active patient identity.
+    const currentId=String(cur.patientId||'').trim();
+    set('patientId',currentId||p.patientId||'');
+    set('patientSpecies',p.species||cur.species||'犬');set('patientBreed',p.breed||cur.breed);set('patientAge',p.age||cur.age);set('patientSex',p.sex||cur.sex);set('patientWeight',p.weight??cur.weight??'');
+    const chief=$('patientChief');if(chief&&!chief.value){const pr=(plan.problems||[]).map(label).filter(Boolean);chief.value=pr.join('、')||cur.chief||''}
+    const conditions=$('patientConditions');if(conditions&&p.vaccination&&!conditions.value)conditions.value=`免疫状态：${p.vaccination}`;
+    const dx=$('patientDx');if(dx&&!dx.value&&(plan.differentials||[]).length)dx.value='鉴别诊断：'+plan.differentials.slice(0,3).map(label).join('、');
+    let synced=null;
+    try{synced=window.VCT50_PATIENT_STATE?.sync?.();}catch(e){synced=null}
+    if(!synced){try{$('patientSyncNow')?.click();}catch(e){}}
+    const finalState=window.VCT50_PATIENT_STATE||safe(localStorage.getItem('vct50_patient_state'),{})||{};
+    const validId=String(finalState.patientId||'').trim();
+    if(validId && plan.patient) plan.patient.patientId=validId;
+    if(validId) syncPlanToCase(plan);
+    return !!validId;
+  }
+  function autoSyncSuggested(plan){
+    const s=osState(); s.problemList=s.problemList||[]; s.tasks=s.tasks||[]; s.timeline=s.timeline||[]; s.goals=s.goals||[];
+    const pid=plan.plan_id||plan.generated_at;
+    if(s.timeline.some(x=>x.ai_plan_id===pid)) return false;
+    const add=(text,priority='P2',kind='AI建议')=>{if(!text)return;s.tasks.push({text,time:now(),done:false,status:'Suggested',source:'AI',priority,kind,ai_plan_id:pid})};
+    const existing=new Set(s.problemList.map(x=>String(x.text||'').toLowerCase()));
+    plan.problems.concat(plan.red_flags.map(x=>({...x,priority:'P0',text:'⚠ '+label(x)}))).forEach(x=>{const t=label(x);if(!t||existing.has(t.toLowerCase()))return;existing.add(t.toLowerCase());s.problemList.push({text:t,priority:x.priority||'P2',status:'Suggested',source:'AI',created_at:now(),ai_plan_id:pid})});
+    plan.recommended_tests.forEach(x=>add('检查：'+label(x)+(detail(x)?' · '+detail(x):''),x.priority,'Recommended Test（建议检查）'));
+    plan.treatment_options.forEach(x=>add('治疗候选：'+label(x)+(detail(x)?' · '+detail(x):''),x.priority,'Treatment Option（治疗候选）'));
+    plan.medication_options.forEach(x=>add('用药候选（医生审核）：'+label(x)+(detail(x)?' · '+detail(x):''),x.priority,'Medication Option（用药候选）'));
+    plan.monitoring.forEach(x=>add('监测：'+label(x)+(detail(x)?' · '+detail(x):''),x.priority,'Monitoring（监测）'));
+    plan.reassessment.forEach(x=>add('复评：'+label(x)+(detail(x)?' · '+detail(x):''),x.priority,'Reassessment（复评）'));
+    plan.reassessment.forEach(x=>s.goals.push({text:label(x),status:'Suggested',source:'AI',time:now(),ai_plan_id:pid}));
+    s.timeline.push({time:now(),type:'AI建议',text:'AI结构化临床计划已自动同步到 Clinical OS，全部保持 Suggested（建议）状态，未经医生审核不得视为执行医嘱。',patientId:patient().patientId||'',ai_plan_id:pid});
+    saveOS(s); audit('ai_auto_sync_suggested','AI plan synced as Suggested; no active orders'); window.VCT50_CLINICAL_OS?.renderAll?.(); return true;
+  }
+  function selectedPlan(plan){
+    const review=plan._review||{};
+    const filter=arr=>arr.filter((x,i)=>review[`${x._kind||''}|${i}`]!==false);
+    return {problems:filter(plan.problems),red_flags:filter(plan.red_flags),recommended_tests:filter(plan.recommended_tests),treatment_options:filter(plan.treatment_options),medication_options:filter(plan.medication_options),monitoring:filter(plan.monitoring),reassessment:filter(plan.reassessment),differentials:filter(plan.differentials),evidence:filter(plan.evidence),safety_warnings:filter(plan.safety_warnings)};
+  }
+  function applyPlan(plan){
+    const ok=syncPatient(plan);if(!ok)return false;const s=osState();const q=selectedPlan(plan);syncPlanToCase(plan,q);
+    const uniq=(arr,k)=>{const seen=new Set(arr.map(x=>String(k(x)).toLowerCase()));return arr.filter(x=>{const z=String(k(x)).toLowerCase();if(seen.has(z))return false;seen.add(z);return true})};
+    const existing=s.problemList||[];q.problems.forEach(x=>existing.push({text:label(x),priority:x.priority||'P2',status:'Suggested',source:'AI',created_at:now()}));q.red_flags.forEach(x=>existing.push({text:'⚠ '+label(x),priority:'P0',status:'Suggested',source:'AI',created_at:now()}));s.problemList=uniq(existing,x=>x.text).slice(-100);
+    s.tasks=s.tasks||[];q.recommended_tests.forEach(x=>s.tasks.push({text:'检查：'+label(x)+(detail(x)?' · '+detail(x):''),time:now(),done:false,status:'Suggested',source:'AI'}));q.treatment_options.forEach(x=>s.tasks.push({text:'治疗候选：'+label(x)+(detail(x)?' · '+detail(x):''),time:now(),done:false,status:'Suggested',source:'AI'}));q.medication_options.forEach(x=>s.tasks.push({text:'用药候选（医生审核）：'+label(x)+(detail(x)?' · '+detail(x):''),time:now(),done:false,status:'Suggested',source:'AI'}));q.monitoring.forEach(x=>s.tasks.push({text:'监测：'+label(x)+(detail(x)?' · '+detail(x):''),time:now(),done:false,status:'Suggested',source:'AI'}));q.reassessment.forEach(x=>s.tasks.push({text:'复评：'+label(x)+(detail(x)?' · '+detail(x):''),time:now(),done:false,status:'Suggested',source:'AI'}));
+    s.timeline=s.timeline||[];s.timeline.push({time:now(),type:'AI计划',text:'AI Clinical Plan 已由医生应用到 Clinical OS；所有项目保持 Suggested（建议）状态，待逐项审核。',patientId:patient().patientId||''});
+    s.goals=s.goals||[];q.reassessment.forEach(x=>s.goals.push({text:label(x),status:'Suggested',source:'AI',time:now()}));
+    saveOS(s);audit('ai_apply_plan','AI clinical plan applied; still requires clinician review');
+    window.VCT50_CLINICAL_OS?.renderAll?.();
+  }
+  function reject(){const pid=lastPlan?.plan_id||'';localStorage.removeItem(KEY);audit('ai_reject_plan','AI plan rejected; no patient/Clinical OS changes from rejection');lastPlan=null;if($('aiOut'))$('aiOut').innerHTML=`<div class="os-note">本次 AI 计划已拒绝；未写入患者状态，也未新增 Clinical OS 医嘱。</div>`}
+  function wire(plan){
+    const groups=['problems','red_flags','differentials','recommended_tests','treatment_options','medication_options','monitoring','reassessment','evidence','safety_warnings']; plan._review=plan._review||{}; groups.forEach(g=>(plan[g]||[]).forEach((x,i)=>{x._kind=g; const k=`${g}|${i}`; if(plan._review[k]===undefined)plan._review[k]=true;}));
+    lastPlan=plan;localStorage.setItem(KEY,JSON.stringify(plan));audit('ai_plan_staged','AI plan staged for clinician review; no Clinical OS mutation');
+    const a=$('aiOut');if(!a)return;
+    a.innerHTML=renderPlan(plan);
+    bindActionContainer(a);
+    const inbox=$('aiInboxOut');
+    if(inbox){ inbox.innerHTML=renderPlan(plan); bindActionContainer(inbox); }
+  }
+  function bindActionContainer(a){
+    if(!a || a.dataset.aiActionsBound==='1')return;
+    a.dataset.aiActionsBound='1';
+    a.addEventListener('change',e=>{const c=e.target.closest('input[data-ai-review]');if(!c||!a.contains(c)||!lastPlan)return;lastPlan._review=lastPlan._review||{};lastPlan._review[c.dataset.aiReview]=c.checked;localStorage.setItem(KEY,JSON.stringify(lastPlan));});
+    a.addEventListener('click',e=>{
+      const btn=e.target.closest('button[data-ai-action]');
+      if(!btn || !a.contains(btn))return;
+      e.preventDefault();e.stopImmediatePropagation();
+      if(!lastPlan){a.insertAdjacentHTML('beforeend','<div class="os-warning">当前没有可审核的 AI 计划。</div>');return}
+      const action=btn.dataset.aiAction; btn.disabled=true;
+      try{
+        if(action==='apply'){const ok=applyPlan(lastPlan);a.insertAdjacentHTML('beforeend',ok?'<div class="os-note">✓ 已应用到 Clinical OS，并已回写病例工作台的检查、治疗、监测与复评字段。</div>':'<div class="os-warning">应用失败：当前患者无有效 Patient ID，请先在首页建立并同步患者。</div>');}
+        else if(action==='sync'){const ok=syncPatient(lastPlan);a.insertAdjacentHTML('beforeend',ok?'<div class="os-note">✓ 患者信息已同步到 Patient State，并已回写病例工作台；相关临床模块已刷新。</div>':'<div class="os-warning">患者同步未完成：请先在首页建立有效患者信息。</div>');}
+        else if(action==='reject'){reject();}
+      }finally{if(action!=='reject')setTimeout(()=>btn.disabled=false,250);}
+    });
+  }
+  function promptContext(){
+    const p=patient(),s=osState();return {version:'5.0-r08',patient:p,problems:s.problemList||[],vitals:s.vitals||[],labs:s.labs||[],timeline:(s.timeline||[]).slice(-50),tasks:s.tasks||[],goals:s.goals||[],allergies:s.allergies||[],drug_safety:window.VCT50_CLINICAL_OS?.drugSafety?.()||[],fluid_safety:window.VCT50_CLINICAL_OS?.fluidSafety?.()||[],user_input:{chief:$('aiChief')?.value||'',tests:$('aiTests')?.value||'',results:$('aiResults')?.value||'',history:$('aiHistory')?.value||'',question:$('aiQuestion')?.value||''}};
+  }
+  function install(){
+    if(!$('aiRun'))return;
+    if(!$('ai-sync-style')){const st=document.createElement('style');st.id='ai-sync-style';st.textContent=`.ai-review-check{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#475569;margin-right:6px}.ai-review-check input{accent-color:#0f766e}.ai-review-note{margin-top:10px}.ai-sync-bar button{position:relative;z-index:2;pointer-events:auto;cursor:pointer;min-height:42px}.ai-sync-bar button:disabled{opacity:.55;cursor:wait}.ai-plan{margin-top:12px;border:2px solid var(--line);border-radius:14px;padding:12px;background:#fff}.ai-plan-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.ai-plan-sec{margin-top:10px}.ai-plan-sec h4{margin:7px 0}.ai-plan-row{display:flex;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:10px;padding:9px;margin:6px 0;background:#fbfdff}.ai-sync-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}@media(max-width:700px){.ai-plan-head,.ai-plan-row{flex-direction:column}}`;document.head.appendChild(st)}
+    const old=$('aiRun');if(old.dataset.structuredBridge)return;old.dataset.structuredBridge='1';
+    old.onclick=async()=>{
+      const base=$('aiBase').value.trim().replace(/\/$/,''),model=$('aiModel').value.trim(),key=$('aiKey').value.trim();
+      if(!base||!model||!key){$('aiOut').innerHTML='<div class="bad">请先填写 API Base URL、模型和 API Key。</div>';return}
+      const ctx=promptContext();$('aiOut').innerHTML='<div class="info">AI正在分析病例，并生成可审核的结构化临床计划……</div>';
+      const system=`你是兽医临床决策支持模型（Veterinary Clinical Decision Support），服务对象是执业兽医。你的任务不是给出泛泛科普，而是基于输入病例进行结构化、可审查、可追溯的临床推理。严格区分：Known Facts（已知事实）、Clinical Inference（临床推断）、Differential Diagnosis（鉴别诊断）、Recommendation（建议）、Doctor Confirmed（医生确认）、Executed（已执行）。如果证据不足，明确写“资料不足”，禁止补造。
+输出严格 JSON，不要 Markdown，不要额外解释。顶层必须包含：CLINICAL_SUMMARY, CONFIDENCE, PATIENT, PROBLEMS, RED_FLAGS, DIFFERENTIALS, RECOMMENDED_TESTS, TREATMENT_OPTIONS, MEDICATION_OPTIONS, MONITORING, REASSESSMENT, EVIDENCE, SAFETY_WARNINGS。
+PATIENT字段：patientId,species,breed,age,sex,weight,vaccination。数组对象可使用：name/text/test/problem/drug,priority,description,rationale,supporting_evidence,against_evidence,goal,interpretation,status,dose,route,frequency,duration,monitoring,contraindications,interactions,source。priority只能P0/P1/P2/P3；status初始只能Suggested。
+临床推理要求：1）先总结病例和当前最重要异常；2）RED_FLAGS必须说明为什么危险、立即需要排除/处理什么；3）DIFFERENTIALS必须按优先级排列，并尽可能写支持证据、反对证据/缺失证据，以及下一步如何区分；4）RECOMMENDED_TESTS必须说明检查目的和预期如何改变决策，而不是只列检查名；5）TREATMENT_OPTIONS必须围绕稳定化、病因治疗、支持治疗和复评目标组织；6）MEDICATION_OPTIONS必须做Medication Safety Review（用药安全审核），涉及剂量时只能引用输入病例、项目数据库或可靠标签/指南中明确存在的信息，否则不要编造固定剂量，并明确要求核对制剂标签/当前指南；7）MONITORING和REASSESSMENT必须给出指标、触发条件和复评逻辑；8）EVIDENCE说明证据来源或证据等级，不得虚构文献；9）SAFETY_WARNINGS列出物种、器官功能、禁忌证、相互作用和高风险操作的核验要求。
+英文专业术语旁必须给出简短中文解释。AI输出永远只是Suggested（建议），不得声称已经诊断、已经用药或已经执行。`;
+      try{const r=await fetch(base+'/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},body:JSON.stringify({model,messages:[{role:'system',content:system},{role:'user',content:JSON.stringify(ctx)}],temperature:.1})});if(!r.ok)throw new Error('HTTP '+r.status+' '+await r.text());const j=await r.json();const txt=j.choices?.[0]?.message?.content||'';const raw=extractJSON(txt);if(!raw)throw new Error('模型未返回可解析的结构化 JSON；请重试或更换支持 JSON 输出的模型。');const plan=normalize(raw);plan.raw_text=txt;wire(plan);audit('ai_generate_plan','structured AI plan generated');}
+      catch(e){$('aiOut').innerHTML=`<div class="bad">AI调用/结构化解析失败：${esc(e.message)}<br>请检查 Base URL、模型、Key、CORS，或选择支持 JSON 输出的模型。</div>`}
+    };
+    // AI Plan is intentionally kept inside the main AI workspace to avoid a duplicate navigation entry.
+    const aiCard=$('ai')?.querySelector('.card');
+    if(aiCard && !$('aiPatientSyncStatus')){
+      const status=document.createElement('div');status.id='aiPatientSyncStatus';status.className='ai-patient-status os-note';
+      aiCard.insertBefore(status,$('aiRun')?.nextSibling||null);
+    }
+    const refreshPatientContext=()=>{
+      const p=patient();
+      ['aiChief'].forEach(id=>{if($(id))$(id).value=p.chief||''});
+      ['aiHistory'].forEach(id=>{if($(id))$(id).value=p.history||p.conditions||''});
+      const st=$('aiPatientSyncStatus');
+      if(st){
+        const valid=String(p.patientId||'').trim();
+        st.innerHTML=valid?`<b>当前患者已同步：</b>${esc(valid)} · ${esc(p.species||'犬')}${p.weight?` · ${esc(p.weight)} kg`:''}<br><span class="os-muted">患者资料已自动刷新；如资料发生变化，请重新点击“分析病例”。不会自动生成新的诊疗建议。</span>`:`<b>当前尚未建立有效患者。</b> 请先在首页建立并同步患者。`;
+        st.className='ai-patient-status '+(valid?'os-note':'os-warning');
+      }
+    };
+    window.VCT50_AI_BRIDGE_REFRESH=refreshPatientContext;
+    const cached=safe(localStorage.getItem(KEY),null);if(cached){lastPlan=cached;setTimeout(()=>wire(cached),0)}
+    window.addEventListener('vct50:patient-change',()=>{refreshPatientContext();if(lastPlan){const currentId=String(patient().patientId||'');const stale=currentId!==String(lastPlan.patient?.patientId||'') || (patient().updated_at&&lastPlan.generated_at&&new Date(patient().updated_at)>new Date(lastPlan.generated_at));if(stale){lastPlan._stale=true;localStorage.setItem(KEY,JSON.stringify(lastPlan));}if($('aiOut')){$('aiOut').innerHTML=renderPlan(lastPlan);bindActionContainer($('aiOut'));if(stale)$('aiOut').insertAdjacentHTML('afterbegin','<div class="os-warning"><b>患者资料已在本次 AI 分析后发生变化。</b>请重新分析病例后再采用本次计划。</div>')}}});
+    refreshPatientContext();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+  function clearPlan(){lastPlan=null;localStorage.removeItem(KEY);if($("aiOut"))$("aiOut").innerHTML='<div class="os-note">当前患者已切换；上一位患者的 AI 计划已清除，请重新分析病例。</div>';window.VCT50_AI_BRIDGE_REFRESH?.()}
+  window.VCT50_AI_BRIDGE={promptContext,normalize,wire,applyPlan,syncPatient,getLastPlan:()=>lastPlan,refreshPatientContext:()=>window.VCT50_AI_BRIDGE_REFRESH?.()};
+  window.VCT50_AI_BRIDGE.clearPlan=clearPlan;
+})();

@@ -1,2 +1,40 @@
-# vct-hospital-os
-VCT Hospital OS — AI-native veterinary hospital management and clinical decision support system.
+# Vet Clinical Toolbox 5.0
+
+兽医临床工具箱——固定产品版本 5.0。项目保持纯 HTML5 / CSS3 / 原生 JavaScript ES6，无 Vue/React 重型框架。
+
+## 5.0-r08 核心更新
+
+- 单一 `patientState` 与全局 `CustomEvent` 状态同步。
+- Clinical Rules Engine：单位、输入校验、物种/品种安全锁、临床红线。
+- 休克分次 Bolus、Na/KCl 安全边界、低白蛋白校正 AG、血气温度校正。
+- CPR 剂量卡、制剂浓度换算、100–120 bpm 节拍器、2 分钟语音提醒。
+- VHS/VLAS/ACVIM、IRIS CKD、积液鉴别、局麻 LADD、催吐、ILE、UOP、NaHCO₃/KCl、DKA、BSA/化疗、ISCAID、A4 打印、药物安全审计。
+- PWA 离线缓存采用内部 `5.0-r08` revision；用户可见产品版本仍固定为 5.0。
+- `tests/smoke.mjs` + GitHub Actions 用于基础回归检查。
+
+## 重要原则
+
+临床工具只提供决策支持。药品标签、实际实验室报告、患者动态监测结果、本院 protocol 和当前专业指南优先。高风险药物、输液、CPR、解毒、DKA、化疗和电解质处方必须由执业兽医独立复核。
+
+## 5.0-r08｜427药物一次性资料卡整合
+
+本次将 427 个药物条目统一同步至 `data/drug_leaflets_5.0.json`，并回写 `data/drugs.json` 的 `label_card`，使前端药物搜索直接读取统一结构化资料。
+
+字段包括：适应证、剂量/用法、禁忌证、警告、不良反应、相互作用、特殊人群、监测、休药期、储存、有效期、批准文号、厂家、证据等级、来源及完整度。
+
+重要：缺失或尚未核验的信息不会被伪造，而是明确显示“未核验/当前数据库未完成具体制剂标签核验”。A级仅表示具体官方标签资料；B级为权威兽医资料参考；C/D级不得冒充具体商品批准标签。
+
+## 5.0-r08 临床工作站扩展
+
+本版在保持产品版本 5.0-r08 不变的前提下增加 `clinical_workstation_5.0.js`：
+- 临床决策中心：BSA 数学换算、UOP、补钾安全上限核算、液体计划数学、输血容量估算。
+- 检验模式筛查：CBC/生化常见异常模式与红旗提示；明确要求使用本院参考区间复核。
+- 三药快速相互作用审计：用于高风险组合的二次提醒，不替代完整药品相互作用核查。
+- 50+核心疾病/综合征结构化临床框架：优先检查、监测、红旗和治疗原则；不自动生成固定处方。
+- 结构化病例报告模板与本机病例时间轴。
+
+安全边界：所有高风险药物、输液、电解质、输血、麻醉、CPR、DKA、化疗和解毒相关结果必须由执业兽医结合患者实时状态、具体制剂标签和本院 protocol 独立复核。
+
+## 5.0-r08 Final Clinical Core
+
+本最终整合版增加统一 Patient State、临床总览、急诊驾驶舱、Critical/Red-Flag Engine、综合实验室模式识别、用药安全审计、住院趋势和结构化影像报告。详见 `FINAL_CHANGELOG_5.0-r08.md`。
