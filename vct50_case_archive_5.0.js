@@ -7,7 +7,7 @@
   const now=()=>new Date().toISOString();
   const safe=(s,d)=>{try{return JSON.parse(s)||d}catch{return d}};
   const val=id=>$(id)?.value??'';
-  const ids=['caseId','caseSpecies','caseBreed','caseAge','caseSex','caseWeight','caseChief','caseHistory','casePast','casePrevent','caseTests','caseResults','caseDx','caseDDx','casePlan','caseAdvice','caseFollow','casePetName','caseOwner','casePhone','mrVisitTime','mrVisitType','mrVet','mrVetSign','mrExam','mrAssessment','mrAdvice','mrDisclosure'];
+  const ids=['caseId','caseSpecies','caseBreed','caseCoat','caseAge','caseSex','caseWeight','caseChief','caseHistory','casePast','casePrevent','caseTests','caseResults','caseDx','caseDDx','casePlan','caseAdvice','caseFollow','casePetName','caseOwner','casePhone','mrVisitTime','mrVisitType','mrVet','mrVetSign','mrExam','mrAssessment','mrAdvice','mrDisclosure'];
   function records(){const a=safe(localStorage.getItem(CASES_KEY),[]);return Array.isArray(a)?a:[]}
   function saveRecords(a){localStorage.setItem(CASES_KEY,JSON.stringify(a.slice(-500)))}
   function capture(){const o={};ids.forEach(id=>o[id]=val(id));o.updatedAt=now();o.ownerName=o.caseOwner;o.ownerPhone=o.casePhone;o.petName=o.casePetName;return o}
@@ -22,7 +22,7 @@
   function syncPatientFromCase(o){
     const p=window.VCT50_PATIENT_STATE;
     if(!p)return;
-    const map={patientId:o.caseId,patientSpecies:o.caseSpecies,patientBreed:o.caseBreed,patientAge:o.caseAge,patientSex:o.caseSex,patientWeight:o.caseWeight,patientChief:o.caseChief,patientHistory:o.caseHistory,patientConditions:o.casePast,patientDx:o.caseDx,patientOwner:o.caseOwner,patientPhone:o.casePhone,patientPetName:o.casePetName};
+    const map={patientId:o.caseId,patientSpecies:o.caseSpecies,patientBreed:o.caseBreed,patientCoat:o.caseCoat,patientAge:o.caseAge,patientSex:o.caseSex,patientWeight:o.caseWeight,patientChief:o.caseChief,patientHistory:o.caseHistory,patientConditions:o.casePast,patientDx:o.caseDx,patientOwner:o.caseOwner,patientPhone:o.casePhone,patientPetName:o.casePetName};
     Object.entries(map).forEach(([id,v])=>{if($(id)&&v!==undefined)$(id).value=v});
     if($('patientMeds')&&o.casePast)$('patientMeds').value=o.casePast;
     try{p.sync?.()}catch(e){console.warn(e)}

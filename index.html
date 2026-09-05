@@ -95,7 +95,7 @@ footer{max-width:1280px;margin:auto;padding:20px 14px 45px;color:var(--muted);fo
 
 <section id="case" class="view"><div class="card"><h2>病例工作台</h2>
 <div class="grid">
-<div><label>病例编号<input id="caseId" placeholder="自动或手动"></label><label>物种<select id="caseSpecies"><option>犬</option><option>猫</option><option>鹦鹉/鸟类</option><option>兔/啮齿类</option><option>爬宠/龟鳖</option><option>其他</option></select></label><label>品种<input id="caseBreed"></label><label>年龄<input id="caseAge" placeholder="如 8岁"></label><label>性别<select id="caseSex"><option>雄</option><option>雌</option><option>雄性绝育</option><option>雌性绝育</option></select></label><label>体重 kg<input id="caseWeight" type="number" step=".01"></label><label>宠物姓名<input id="casePetName" placeholder="如 多多"></label><label>主人姓名<input id="caseOwner" placeholder="宠物主人"></label><label>主人手机号<input id="casePhone" inputmode="tel" placeholder="11位手机号"></label></div>
+<div><label>病例编号<input id="caseId" placeholder="自动或手动"></label><label>物种<select id="caseSpecies"><option>犬</option><option>猫</option><option>鹦鹉/鸟类</option><option>兔/啮齿类</option><option>爬宠/龟鳖</option><option>其他</option></select></label><label>品种<input id="caseBreed"></label><label>毛色<input id="caseCoat" placeholder="如 黑白/狸花"></label><label>年龄<input id="caseAge" placeholder="如 8岁"></label><label>性别<select id="caseSex"><option>雄</option><option>雌</option><option>雄性绝育</option><option>雌性绝育</option></select></label><label>体重 kg<input id="caseWeight" type="number" step=".01"></label><label>宠物姓名<input id="casePetName" placeholder="如 多多"></label><label>主人姓名<input id="caseOwner" placeholder="宠物主人"></label><label>主人手机号<input id="casePhone" inputmode="tel" placeholder="11位手机号"></label></div>
 <div><label>主诉<textarea id="caseChief"></textarea></label><label>现病史<textarea id="caseHistory"></textarea></label><label>既往史/用药史<textarea id="casePast"></textarea></label><label>疫苗/驱虫史<textarea id="casePrevent"></textarea></label></div>
 <div><label>检查项目<textarea id="caseTests"></textarea></label><label>检查结果<textarea id="caseResults"></textarea></label><label>初步诊断<textarea id="caseDx"></textarea></label><label>鉴别诊断<textarea id="caseDDx"></textarea></label></div>
 <div><label>治疗方案<textarea id="casePlan"></textarea></label><label>医嘱/监测<textarea id="caseAdvice"></textarea></label><label>复诊时间<input id="caseFollow"></label><button class="primary" id="caseSaveBtn">保存病例到本机</button><button class="secondary" id="caseExportBtn">导出病例 JSON</button><button class="secondary" id="caseNewVisitBtn">新建复诊</button></div>
@@ -467,6 +467,7 @@ renderCpr();loadDB();
 <script src="vct50_case_archive_5.0.js"></script>
 <script>window.VCT50_PRODUCT_MODE="hospital";</script>
 <script src="medical_record_prescription_consent_5.0-r08.js"></script>
+<script src="outpatient_registration_5.0-r08.js"></script>
 <script src="hospital_os_complete_5.0.js"></script>
 </body>
 </html>
