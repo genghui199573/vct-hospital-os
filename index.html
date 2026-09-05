@@ -235,7 +235,7 @@ async function loadDB(){
     DB.protocols=p.protocols||{};
     const all=[...DB.drugs,...DB.additions,...DB.catalog];
     const names=[...new Map(all.map(x=>[(x.id||x.generic_name_zh||Math.random()),x])).values()];
-    DB.drugs=names;
+    DB.drugs=names; window.VCT_DRUGS=DB.drugs;
     $("dbStatus").innerHTML=`<div class="good">数据库读取完成：${DB.drugs.length} 个药物条目；生物制品 ${DB.biologics.length} 条。</div>`;
     fillDrugSelects();renderVax();searchDrugs();
   }catch(e){$("dbStatus").innerHTML=`<div class="bad">数据库读取失败：${esc(e.message)}。请确认 data/ 文件路径及文件名。</div>`}
@@ -466,9 +466,11 @@ renderCpr();loadDB();
 <script src="vct50_architecture_5.0.js"></script>
 <script src="vct50_case_archive_5.0.js"></script>
 <script>window.VCT50_PRODUCT_MODE="hospital";</script>
+<script src="pharmacy_inventory_5.0-r08.js"></script>
 <script src="medical_record_prescription_consent_5.0-r08.js"></script>
 <script src="outpatient_registration_5.0-r08.js"></script>
 <script src="vct_outpatient_flow_2_0_5.0-r08.js"></script>
+<script src="medical_workflow_hardening_5.0-r08.js"></script>
 <script src="hospital_os_complete_5.0.js"></script>
 </body>
 </html>
